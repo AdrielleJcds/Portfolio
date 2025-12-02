@@ -1,0 +1,146 @@
+.arts-section-content {
+    /* Padding Top (para afastar do Header fixo), Padding Lateral (para margem), Padding Bottom */
+    padding: 50px 5% 100px; 
+    text-align: center;
+    background-color: var(--cor-fundo);
+}
+
+/* --- GRID DE CARDS --- */
+.arts-grid {
+    display: grid;
+    /* Faz o grid ser responsivo: mínimo de 350px por coluna */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px; 
+    margin-bottom: 60px;
+}
+
+.selection-container {
+    padding: 90px 20%;
+    text-align: center;
+    background-color: var(--cor-fundo);
+}
+
+/* --- ESTILO DO CARD INDIVIDUAL --- */
+.art-card {
+    background-color: var(--cor-card-fundo);
+    border: 3px solid rgba(153, 51, 204, 0.5); 
+    border-radius: 12px;
+    overflow: hidden; 
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.art-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 30px rgba(153, 51, 204, 0.7); 
+}
+
+.card-header {
+    padding: 20px 25px 15px; 
+}
+
+.categoria {
+    display: block;
+    color: var(--cor-destaque);
+    font-size: 0.95rem; 
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.cliente-nome {
+    font-size: 1.8rem; 
+    color: var(--cor-texto-principal);
+}
+
+.imagem-wrapper {
+    height: 250px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.art-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.card-body {
+    padding: 25px; 
+}
+
+.descricao {
+    color: var(--cor-secundaria);
+    font-size: 1.1rem; 
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* --- Botão Link --- */
+.btn-art-link {
+    display: inline-block;
+    padding: 15px 30px; 
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-principal);
+    font-weight: bold;
+    font-size: 1.15rem; 
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-art-link:hover {
+    background-color: #7b29a7;
+    box-shadow: 0 0 15px var(--cor-destaque);
+}
+
+
+/* ---------------------------------------------------------------------- */
+/* --- RESPONSIVIDADE --- */
+/* ---------------------------------------------------------------------- */
+
+/* Telas muito largas */
+@media (min-width: 1800px) {
+    .arts-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1600px; 
+        margin: 0 auto 60px;
+    }
+}
+
+/* Telas menores (Mobile) */
+@media (max-width: 768px) {
+    .arts-section-content {
+        /* Garante que o padding lateral de 5% seja mantido para a "borda" */
+        padding: 50px 5%; 
+    }
+    
+    .arts-grid {
+        /* Força coluna única em mobile */
+        grid-template-columns: 1fr; 
+        gap: 25px;
+    }
+    
+    .art-card {
+        border: 2px solid rgba(153, 51, 204, 0.5); 
+    }
+    
+    .imagem-wrapper {
+        height: 200px; 
+    }
+    
+    .cliente-nome {
+        font-size: 1.6rem;
+    }
+    
+    .descricao {
+        font-size: 1rem;
+    }
+    
+    .btn-art-link {
+        font-size: 1.0rem;
+        padding: 12px 20px;
+    }
+}

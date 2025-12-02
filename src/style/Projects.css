@@ -1,0 +1,180 @@
+.projects-section-content {
+    padding: 0 5% 100px; 
+    text-align: center;
+    background-color: var(--cor-fundo);
+}
+
+/* --- GRID DE PROJETOS --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    gap: 50px; 
+    margin-bottom: 70px; 
+}
+
+/* --- ESTILO DO CARD DE PROJETO --- */
+.project-card {
+    background-color: var(--cor-card-fundo);
+    border: 3px solid var(--cor-destaque);
+    border-radius: 12px; 
+    padding: 40px; 
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 30px rgba(153, 51, 204, 0.7);
+}
+
+.project-title {
+    font-size: 2.2rem; 
+    color: var(--cor-texto-principal);
+    margin-bottom: 20px;
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.2); 
+    padding-bottom: 15px;
+}
+
+.project-description {
+    color: var(--cor-secundaria);
+    font-size: 1.1rem; 
+    line-height: 1.6;
+    margin-bottom: 30px;
+    flex-grow: 1; 
+}
+
+/* --- TAGS DE TECNOLOGIA --- */
+.project-techs h4 {
+    color: var(--cor-destaque);
+    margin-bottom: 12px;
+    font-size: 1.1rem; 
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.tech-tag {
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
+    padding: 7px 14px; 
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* --- LINKS (Botões) --- */
+.project-links {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px; 
+}
+
+.btn-link {
+    padding: 14px 28px; 
+    border-radius: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.05rem; 
+    transition: all 0.3s;
+    border: 2px solid transparent;
+    text-decoration: none; 
+}
+
+.btn-repo {
+    background-color: transparent;
+    border-color: var(--cor-secundaria);
+    color: var(--cor-secundaria);
+}
+
+.btn-repo:hover {
+    border-color: var(--cor-destaque);
+    color: var(--cor-destaque);
+    box-shadow: 0 0 5px var(--cor-destaque);
+}
+
+.btn-demo {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-principal);
+}
+
+.btn-demo:hover {
+    background-color: #7b29a7;
+    box-shadow: 0 0 15px var(--cor-destaque); 
+}
+
+/* --- CTA GITHUB PRINCIPAL --- */
+.github-cta {
+    margin-top: 60px;
+    padding: 40px; 
+    background-color: var(--cor-card-fundo);
+    border-radius: 12px;
+    border: 3px solid var(--cor-destaque); 
+    display: inline-block;
+    max-width: 900px; 
+    width: 100%;
+}
+
+.github-cta p {
+    color: var(--cor-texto-principal);
+    font-size: 1.2rem; 
+    margin-bottom: 20px;
+}
+
+.btn-github {
+    display: inline-block;
+    padding: 15px 35px; 
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-principal);
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.15rem;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-github:hover {
+    background-color: #7b29a7;
+    box-shadow: 0 0 15px var(--cor-destaque);
+}
+
+/* --- Responsividade --- */
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-card {
+        padding: 30px 20px;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn-link {
+        width: 100%;
+    }
+
+    .project-title {
+        font-size: 1.6rem;
+    }
+    
+    .github-cta {
+        padding: 30px;
+    }
+    
+    .btn-github {
+        font-size: 1.05rem;
+        padding: 12px 25px;
+    }
+}

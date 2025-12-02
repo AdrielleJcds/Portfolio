@@ -1,0 +1,240 @@
+.sobre-mim-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    
+    gap: 20px; 
+    
+    padding: 60px 3%; 
+    background-color: var(--cor-fundo);
+}
+
+/* --- CONTEÚDO DE TEXTO (Lado Esquerdo) --- */
+.sobre-mim-conteudo {
+    max-width: 40%; 
+    color: var(--cor-texto-principal);
+    padding: 10px; 
+    margin-top: 60px;
+
+    border-left: none; 
+    position: relative;
+}
+
+/* LINHA DE CONTROLE */
+.sobre-mim-conteudo::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px; 
+    height: 100%; 
+    background-color: var(--cor-destaque);
+    border-radius: 2px;
+}
+
+.titulo-secao {
+    font-size: 2.1rem; 
+    font-weight: 700;
+    margin-bottom: 5px; 
+    color: var(--cor-texto-principal);
+    padding-left: 10px; 
+}
+
+.subtitulo-jinnie {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--cor-secundaria);
+    margin-bottom: 10px; 
+    padding-left: 10px;
+}
+
+.texto-revisado p {
+    font-size: 1.2rem; 
+    line-height: 1.5; 
+    margin-bottom: 12px; 
+    padding-left: 10px;
+}
+
+.sobre-mim-conteudo p strong {
+    color: var(--cor-destaque);
+    font-weight: 700;
+}
+
+.chamada-final {
+    margin-top: 15px; 
+    font-size: 1.3rem; 
+    font-weight: 600;
+    color: var(--cor-destaque);
+    padding-left: 10px;
+}
+
+
+/* --- CARD DE CONTATO (Lado Direito) --- */
+.contato-rapido-card {
+    width: 100%;
+    max-width: 25%;
+    min-width: 280px; 
+    margin-top: 60px;
+
+    background-color: var(--cor-card-fundo);
+    border: 4px solid var(--cor-destaque); 
+    border-radius: 15px;
+    padding: 25px 20px; 
+    text-align: center;
+    box-shadow: 0 0 15px rgba(153, 51, 204, 0.7); 
+    align-self: flex-start; 
+}
+
+.avatar-wrapper {
+    margin-bottom: 20px; 
+}
+
+.avatar-img {
+    width: 140px; 
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid var(--cor-destaque); 
+    object-fit: cover;
+}
+
+.card-titulo {
+    font-size: 1.6rem; 
+    margin-bottom: 20px;
+}
+
+.contato-info {
+    text-align: left;
+}
+
+.destaque-status {
+    margin-bottom: 20px !important; 
+}
+
+.separador {
+    height: 1px; 
+    margin: 15px 0; 
+}
+
+.contato-item {
+    margin: 10px 0; 
+    font-size: 1rem; 
+    color: var(--cor-secundaria);
+    line-height: 1.4;
+}
+.icone {
+    margin-right: 10px; 
+    font-size: 1.2rem; 
+}
+
+.btn-card-contato {
+    margin-top: 20px;
+    padding: 8px 15px; 
+    font-size: 0.9rem;
+    border-radius: 6px;
+}
+
+/* --- ICONES COLORIDOS --- */
+.contato-info .contato-item:nth-child(1) .icone { 
+    color: #4CAF50; 
+}
+.contato-info .contato-item:nth-child(2) .icone { 
+    color: #FFEB3B; 
+}
+.contato-info .contato-item:nth-child(3) .icone { 
+    color: #03A9F4; 
+}
+.contato-info .contato-item:nth-child(4) .icone { 
+    color: #9C27B0; 
+}
+.contato-info .contato-item:nth-child(5) .icone { 
+    color: #E91E63; 
+}
+.contato-info .contato-item:nth-child(6) .icone { 
+    color: #FF5722; 
+}
+.contato-info .contato-item:nth-child(7) .icone { 
+    color: #0077B5; 
+}
+.contato-info .contato-item:nth-child(8) .icone { 
+    color: #CDDC39; 
+}
+
+
+/* --- CARD DE CONTATO (Ajuste no botão) --- */
+
+.btn-card-contato {
+    display: block;
+    width: 100%;
+    margin-top: 20px; 
+    padding: 10px 20px; 
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-principal);
+    font-weight: bold;
+    font-size: 0.95rem; 
+    border-radius: 6px;
+    transition: var(--transicao-rapida);
+    text-align: center;
+    text-decoration: none;
+    align-self: center; 
+}
+
+.btn-card-contato:hover {
+    background-color: #6a1b9a; 
+    box-shadow: 0 0 10px var(--cor-destaque);
+}
+
+/* --- RESPONSIVIDADE PARA TODAS AS TELAS --- */
+
+/* Breakpoint para notebooks menores (Abaixo de 1400px) */
+@media (max-width: 1400px) {
+    .sobre-mim-conteudo {
+        max-width: 50%; 
+        min-width: 300px; 
+    }
+    .contato-rapido-card {
+        max-width: 35%;
+        min-width: 250px; 
+    }
+    .sobre-mim-container {
+        gap: 15px; 
+    }
+    .texto-revisado p {
+        font-size: 1.3rem; 
+    }
+}
+
+
+/* Quebra principal para tablets e mobile (Abaixo de 1100px) */
+@media (max-width: 1100px) {
+    .sobre-mim-container {
+        flex-direction: column; 
+        align-items: center;
+        padding: 40px 5%; 
+        gap: 30px; 
+    }
+    
+    .sobre-mim-conteudo {
+        max-width: 100%;
+        width: 95%; 
+        min-width: initial;
+        padding: 0;
+    }
+    
+    .titulo-secao {
+        font-size: 2.5rem; 
+    }
+    .subtitulo-jinnie {
+        font-size: 1.2rem; 
+    }
+    .texto-revisado p {
+        font-size: 1.1rem; 
+    }
+
+    .contato-rapido-card {
+        max-width: 95%;
+        padding: 20px 15px; 
+    }
+    .contato-item {
+        font-size: 0.9rem;
+    }
+}

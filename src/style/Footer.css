@@ -1,0 +1,88 @@
+.footer-container {
+    background-color: var(--cor-card-fundo); /* Usa a cor escura dos cards */
+    padding: 40px 5% 20px;
+    border-top: 2px solid var(--cor-destaque);
+}
+
+.footer-principal {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Garante quebras em telas pequenas */
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-info h3 {
+    color: var(--cor-destaque);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    color: var(--cor-secundaria);
+    font-size: 0.9rem;
+}
+
+/* Estilos das Colunas de Links */
+.footer-links h4 {
+    color: var(--cor-texto-principal);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border-bottom: 1px dashed var(--cor-secundaria);
+    padding-bottom: 5px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: var(--cor-destaque); /* Efeito de hover roxo */
+}
+
+/* Quadro Extra */
+.footer-extra {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(153, 51, 204, 0.2);
+    font-size: 0.95rem;
+}
+
+.footer-extra p {
+    color: var(--cor-texto-principal);
+}
+
+.footer-extra a {
+    font-weight: bold;
+    color: var(--cor-destaque);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .footer-principal {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links h4 {
+        margin-top: 20px;
+    }
+
+    .footer-links ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px;
+    }
+}

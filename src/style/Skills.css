@@ -1,0 +1,186 @@
+:root {
+    --cor-destaque: #9933cc; 
+    --cor-secundaria: #ff57a0; 
+    --cor-texto-principal: #e0e0e0;
+}
+
+/* --- SEÇÃO PRINCIPAL --- */
+.skills-page {
+    padding-bottom: 60px; 
+}
+
+.skills-content {
+    display: flex;
+    justify-content: center;
+    padding: 10px 5% 60px; 
+    max-width: 1400px; 
+    margin: 0 auto;
+}
+
+/* --- JANELA PRINCIPAL (Quadro de Status) --- */
+.skills-col.rpg-window {
+    flex: 1; 
+    min-width: 100%;
+    background-color: #1a0f2b; 
+    border-radius: 10px; 
+    padding: 30px; 
+    border: 3px solid var(--cor-destaque); 
+    box-shadow: 0 0 15px var(--cor-destaque);
+}
+
+/* --- GRID DE HABILIDADES (Desktop: Duas Colunas Lado a Lado) --- */
+.rpg-grid-container {
+    display: flex; 
+    gap: 40px; 
+    padding: 0;
+}
+
+.rpg-column {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- TÍTULOS DE GRUPO --- */
+.rpg-group-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffd700; 
+    background-color: rgba(153, 51, 204, 0.2); 
+    padding: 10px 15px; 
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    border: 1px solid #ffd700;
+}
+
+/* --- LISTA DE ITENS --- */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    gap: 12px;
+}
+
+/* --- ITEM DE HABILIDADE (Horizontal e Compacto) --- */
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 10px 15px; 
+    background-color: rgba(0, 0, 0, 0.3); 
+    border: 1px solid rgba(153, 51, 204, 0.5);
+    border-radius: 5px;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.skill-item:hover {
+    box-shadow: 0 0 10px var(--cor-destaque);
+    transform: translateY(-2px);
+}
+
+.skill-icon {
+    font-size: 1.1rem; 
+    margin-right: 12px;
+    color: var(--cor-destaque);
+    flex-shrink: 0;
+}
+
+.skill-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--cor-texto-principal);
+    flex-grow: 1; 
+    min-width: 80px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* --- BARRA DE PROGRESSO --- */
+.skill-progress-bar {
+    width: 100px; 
+    height: 10px; 
+    background-color: #555; 
+    border: 1px solid #777; 
+    border-radius: 2px;
+    overflow: hidden;
+    flex-shrink: 0; 
+    margin: 0 15px;
+}
+
+.skill-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #9933cc, #ff57a0); 
+    transition: width 1s ease-out; 
+}
+
+/* --- NÍVEL (%) --- */
+.skill-level {
+    font-size: 1rem;
+    color: #f7e0ff; 
+    font-weight: bold;
+    flex-shrink: 0; 
+    min-width: 80px; 
+    text-align: right;
+}
+
+/* --- Ajuste visual para itens "Em Estudo" --- */
+.skill-item.skill-in-progress .skill-progress-fill {
+    background: #6a0dad; 
+    opacity: 0.5;
+}
+
+.skill-item.skill-in-progress .skill-level {
+    color: var(--cor-secundaria); 
+    font-weight: 500;
+}
+
+/* --- OBSERVAÇÃO INFERIOR --- */
+.skills-obs {
+    margin-top: 15px; 
+    padding: 0 5%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* ---------------------------------------------------------------------- */
+/* --- RESPONSIVIDADE (Mobile: 1 Coluna) --- */
+/* ---------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .skills-content {
+        padding: 20px 5% 40px; 
+    }
+
+    .skills-col.rpg-window {
+        padding: 15px;
+    }
+    
+    .rpg-grid-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .rpg-group-title {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .skill-name {
+        max-width: none; 
+    }
+    
+    .skill-progress-bar {
+        width: 60px; 
+        margin: 0 8px;
+    }
+    
+    .skill-level {
+        font-size: 0.9rem;
+        min-width: 60px;
+    }
+}

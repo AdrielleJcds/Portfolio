@@ -1,0 +1,219 @@
+.home-container {
+    min-height: 90vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 5%; 
+    background-color: var(--cor-fundo);
+    overflow: hidden; 
+}
+
+.home-content {
+    max-width: 1400px; 
+    display: flex;
+    flex-direction: row-reverse; 
+    align-items: center;
+    gap: 70px; 
+}
+
+/* --- IMAGEM DE PERFIL --- */
+.perfil-wrapper {
+    flex-shrink: 0; 
+    text-align: center;
+}
+
+.perfil-img {
+    width: 400px; 
+    height: 400px; 
+    border-radius: 30%; 
+    object-fit: cover;
+    border: 2px solid var(--cor-destaque); 
+    box-shadow: 0 0 25px rgba(153, 51, 204, 0.95); 
+    transition: transform 0.4s;
+}
+
+.perfil-img:hover {
+    transform: scale(1.03);
+}
+
+/* --- TEXTO PRINCIPAL --- */
+.home-text {
+    max-width: 800px; 
+    text-align: left;
+}
+
+.saudacao {
+    font-size: 1.5rem; 
+    color: var(--cor-secundaria);
+    margin-bottom: 5px;
+}
+
+.nome-principal {
+    font-size: 4.2rem; 
+    font-weight: 900;
+    color: var(--cor-texto-principal);
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.profissao {
+    font-size: 2.4rem; 
+    font-weight: 500;
+    color: var(--cor-destaque);
+    margin-bottom: 25px; 
+}
+
+.resumo {
+    font-size: 1.4rem; 
+    line-height: 1.7; 
+    color: var(--cor-texto-principal);
+    margin-bottom: 30px; 
+}
+
+/* --- BOTÕES DE AÇÃO --- */
+.cta-links {
+    display: flex;
+    gap: 20px; 
+    flex-wrap: wrap;
+}
+
+.btn-cta {
+    padding: 15px 30px; 
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 1.2rem; 
+    text-decoration: none; 
+    transition: all 0.3s ease;
+}
+
+.btn-dev {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-principal);
+    border: none;
+}
+
+.btn-dev:hover {
+    background-color: #7b29a7;
+    box-shadow: 0 0 12px var(--cor-destaque);
+}
+
+.btn-art {
+    background-color: transparent;
+    color: var(--cor-destaque);
+    border: 2px solid var(--cor-destaque); 
+}
+
+.btn-art:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
+}
+
+
+/* --- LINKS DE REDES SOCIAIS --- */
+.social-links {
+    margin-top: 30px; 
+    display: flex;
+    gap: 20px; 
+}
+
+.social-icon {
+    font-size: 2.2rem; 
+    color: var(--cor-secundaria); 
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.social-links a:nth-child(1) .social-icon:hover {
+    color: #0A66C2; /* LinkedIn */
+}
+.social-links a:nth-child(2) .social-icon:hover {
+    color: #ffffff; /* GitHub */
+}
+.social-links a:nth-child(3) .social-icon:hover {
+    color: #E1306C; /* Instagram */
+}
+
+
+/* ---------------------------------------------------------------------- */
+/* --- RESPONSIVIDADE --- */
+/* ---------------------------------------------------------------------- */
+
+/* Tablet/Notebooks menores (Abaixo de 1250px) */
+@media (max-width: 1250px) { 
+    .home-content {
+        gap: 40px; 
+    }
+    .perfil-img {
+        width: 350px; 
+        height: 350px; 
+    }
+    .nome-principal {
+        font-size: 3.5rem;
+    }
+    .profissao {
+        font-size: 2rem;
+    }
+}
+
+/* Transição para layout de tablet/celular (Abaixo de 1024px) */
+@media (max-width: 1024px) {
+    .home-container {
+        padding: 50px 5%; 
+        min-height: auto; 
+    }
+    .home-content {
+        flex-direction: column; /* Pilha vertical */
+        text-align: center;
+        gap: 30px; 
+    }
+    .home-text {
+        text-align: center;
+    }
+    .perfil-img {
+        width: 250px; 
+        height: 250px; 
+    }
+    .cta-links {
+        gap: 15px; 
+        justify-content: center; /* Centraliza botões */
+    }
+    .nome-principal {
+        font-size: 3rem; 
+    }
+    .profissao {
+        font-size: 1.5rem;
+    }
+    .btn-cta {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    .social-links {
+        margin-top: 30px; 
+        gap: 20px; 
+        justify-content: center; /* Centraliza ícones */
+    }
+    .social-icon {
+        font-size: 2.5rem; 
+    }
+}
+
+/* Celulares pequenos (Abaixo de 550px) */
+@media (max-width: 550px) {
+    .nome-principal {
+        font-size: 2.2rem; 
+    }
+    .profissao {
+        font-size: 1.1rem;
+    }
+    .perfil-img {
+        width: 140px; 
+        height: 140px; 
+    }
+    .btn-cta {
+        padding: 8px 15px;
+        font-size: 0.75rem;
+    }
+    .social-icon {
+        font-size: 1.6rem; 
+    }
+}
