@@ -2,7 +2,7 @@ import React from 'react';
 import Selection from '../components/Selection.jsx'; 
 import '../style/Arts.css';  
 import AloneMorningEmotes from '../assets/AlonemEmotes.png'; 
-import KreewHaitEmotes from '../assets/KreewEmotes.png'; 
+import KreewHaitEmotes from '../assets/kreewEmotes.png'; 
 import LekzxEmotes from '../assets/lekEmotes.png'; 
 import MistEmotes from '../assets/mistyEmotes.png';
 import Apontando from '../assets/sonossauro.png'; 
