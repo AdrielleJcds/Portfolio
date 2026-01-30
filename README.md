@@ -1,62 +1,45 @@
-## 🛠️ README: Portfólio Pessoal 💻
+<div align="center">
 
-Olá\! Este é o repositório do meu portfólio, criado para mostrar minhas habilidades em **Desenvolvimento Front-end** e **Design Digital**.
+# 🛠️ Portfólio Pessoal: JINNIE 💻
 
-O projeto foi construído usando **React** para ser **fácil de atualizar** e com um design **responsivo** e moderno.
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 
------
+**Desenvolvimento Front-end • Design Digital • Ilustração**
 
-### ✨ Tecnologias Principais
+[Link para o Site Ao Vivo](#) </div>
 
-  * **Front-end:** **React** e **Vite** (para velocidade).
-  * **Estilo:** **CSS3** (com variáveis para cores).
-  * **Linguagem:** **JavaScript** (ES6+).
+---
 
------
+## 👋 Olá! 
 
-### 🏗️ Manutenção Simples
+Este é o repositório do meu portfólio, um espaço criado para fundir minhas habilidades técnicas com meu lado artístico. O projeto foi construído focando em **performance**, **modularidade** e uma interface inspirada em sistemas de **RPG**.
 
-A estrutura é modular, o que simplifica a manutenção:
+---
 
-1.  **Componentes:** Uso de componentes React (como `Header`, `Footer`, `ProjectCard`) para reutilizar partes do código.
-2.  **Dados:** Para adicionar ou editar informações (projetos, habilidades, contatos), basta mudar os **arrays de dados** nos arquivos das páginas (`Projects.jsx`, `Skills.jsx`).
-3.  **Tema:** As cores principais são definidas em variáveis CSS (`:root`). Mudar o tema é feito alterando apenas essas variáveis.
+### 🚀 Tecnologias & Habilidades
 
+| Categoria | Tecnologias |
+| :--- | :--- |
+| **Front-end** | React, Vite, JavaScript (ES6+) |
+| **Estilização** | CSS3 (Variáveis & Flexbox/Grid) |
+| **Ferramentas** | Git, GitHub, SQL |
+| **Arte Digital** | Photoshop, Illustrator, Ilustração Chibi |
+| **Idiomas** | Inglês Técnico (Iniciante) |
+
+---
+
+### 🏗️ Arquitetura do Projeto
+
+A estrutura modular permite que o site seja escalável e fácil de manter. 
+
+```bash
 PORTFOLIO_JINNIE/
-├── node_modules/       // Dependências do projeto (gerenciadas pelo npm/yarn)
-├── public/
+├── public/              # Assets públicos
 ├── src/
-│   ├── Assets/         // Imagens, ícones, fontes e outros recursos estáticos
-│   │   ├── (arquivos de imagem como avatar, emotes, etc.)
-│   ├── components/     // Componentes reutilizáveis (UI)
-│   │   ├── Footer.jsx
-│   │   ├── Header.jsx
-│   │   ├── Selection.jsx   // Componente para Títulos e Subtítulos
-│   ├── pages/          // Layouts de página (rotas)
-│   │   ├── About.jsx       // Página 'Sobre Mim'
-│   │   ├── Arts.jsx        // Página 'Artes' / Portfólio Digital
-│   │   ├── Home.jsx        // Página Inicial
-│   │   ├── Projects.jsx    // Página 'Projetos de Desenvolvimento'
-│   │   ├── Skills.jsx      // Página 'Habilidades' (com tema RPG)
-│   ├── style/          // Arquivos CSS dedicados a componentes/páginas
-│   │   ├── About.css
-│   │   ├── Arts.css
-│   │   ├── Footer.css
-│   │   ├── Global.css      // Variáveis de Tema (Cores) e Reset CSS
-│   │   ├── Header.css
-│   │   ├── Home.css
-│   │   ├── Projects.css
-│   │   ├── Selection.css
-│   │   ├── Skills.css
-│   ├── App.jsx         // Componente Principal (Roteamento - React Router DOM)
-│   ├── main.jsx        // Ponto de Entrada do React (Renderização)
-│   └── (outros arquivos de configuração)
-├── .gitignore
-├── index.html          // Template HTML base (Vite)
-├── package.json        // Dependências e Scripts
-├── README.md           // Documentação do projeto (como o que acabamos de criar)
-└── vite.config.js      // Configuração do Vite
-
------
-
-**© 2025 Adrielle J. C. D. S.**
+│   ├── Assets/          # Imagens, avatares e emotes
+│   ├── components/      # UI reutilizável (Header, Footer, etc.)
+│   ├── pages/           # Views: Home, About, Arts, Projects, Skills
+│   ├── style/           # CSS modular (Global e por componente)
+│   ├── App.jsx          # Gerenciamento de rotas
+│   └── main.jsx         # Renderização base
+└── vite.config.js       # Configuração do build
