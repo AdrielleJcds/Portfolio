@@ -7,7 +7,8 @@
 /* --- GRID DE PROJETOS --- */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    /* Reduzido para 320px para melhor comportamento ANTES de quebrar para coluna única */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
     gap: 50px; 
     margin-bottom: 70px; 
 }
@@ -23,6 +24,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-width: 0; /* Ajuda a garantir que o conteúdo não force a largura */
 }
 
 .project-card:hover {
@@ -143,14 +145,25 @@
     box-shadow: 0 0 15px var(--cor-destaque);
 }
 
-/* --- Responsividade --- */
+/* ---------------------------------------------------------------------- */
+/* --- RESPONSIVIDADE --- */
+/* ---------------------------------------------------------------------- */
+
+/* Telas de Tablet / Mobile Grande (Abaixo de 900px) */
 @media (max-width: 900px) {
+    /* RESOLVE O SCROLL HORIZONTAL: Força 1 coluna e anula o minmax(400px) */
     .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; 
         gap: 40px;
+    }
+    
+    .projects-section-content {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
 
+/* Celulares Menores (Abaixo de 600px) */
 @media (max-width: 600px) {
     .project-card {
         padding: 30px 20px;
@@ -162,7 +175,7 @@
     }
     
     .btn-link {
-        width: 100%;
+        width: 100%; 
     }
 
     .project-title {
