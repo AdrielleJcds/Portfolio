@@ -1,3 +1,4 @@
+/* --- CONTAINER DE PROJETOS (Mantendo seu espaçamento original) --- */
 .projects-section-content {
     padding: 0 5% 100px; 
     text-align: center;
@@ -7,187 +8,173 @@
 /* --- GRID DE PROJETOS --- */
 .projects-grid {
     display: grid;
-    /* Reduzido para 320px para melhor comportamento ANTES de quebrar para coluna única */
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
     gap: 50px; 
     margin-bottom: 70px; 
 }
 
-/* --- ESTILO DO CARD DE PROJETO --- */
+/* --- ESTILO DO CARD (Com o fundo cinza grafite do print) --- */
 .project-card {
-    background-color: var(--cor-card-fundo);
-    border: 3px solid var(--cor-destaque);
-    border-radius: 12px; 
+    background-color: #121212; /* O cinza escuro do designer que você gostou */
+    border: 1px solid rgba(153, 51, 204, 0.2); /* Borda fina e discreta */
+    border-radius: 20px; 
     padding: 40px; 
     text-align: left;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-width: 0; /* Ajuda a garantir que o conteúdo não force a largura */
 }
 
 .project-card:hover {
     transform: translateY(-8px); 
-    box-shadow: 0 15px 30px rgba(153, 51, 204, 0.7);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    border-color: var(--cor-destaque);
 }
 
 .project-title {
     font-size: 2.2rem; 
+    font-weight: 800;
     color: var(--cor-texto-principal);
     margin-bottom: 20px;
-    border-bottom: 2px dashed rgba(255, 255, 255, 0.2); 
     padding-bottom: 15px;
 }
 
 .project-description {
-    color: var(--cor-secundaria);
+    color: #aaa; /* Texto cinza claro para combinar com o novo fundo */
     font-size: 1.1rem; 
     line-height: 1.6;
     margin-bottom: 30px;
     flex-grow: 1; 
 }
 
-/* --- TAGS DE TECNOLOGIA --- */
+/* --- TAGS DE TECNOLOGIA (Estilo Pílula Arredondada) --- */
 .project-techs h4 {
-    color: var(--cor-destaque);
-    margin-bottom: 12px;
-    font-size: 1.1rem; 
+    color: #888; /* Título sutil para as tecnologias */
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
     margin-bottom: 30px;
 }
 
 .tech-tag {
-    background-color: var(--cor-destaque);
-    color: var(--cor-fundo);
-    padding: 7px 14px; 
-    border-radius: 6px;
-    font-size: 0.9rem;
-    font-weight: 700;
+    background-color: rgba(153, 51, 204, 0.1); 
+    color: var(--cor-destaque);
+    border: 1px solid rgba(153, 51, 204, 0.3);
+    padding: 6px 16px; 
+    border-radius: 50px; /* Formato pílula do print */
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
-/* --- LINKS (Botões) --- */
+/* --- LINKS (Botões Modernos Arredondados) --- */
 .project-links {
     margin-top: 25px;
     display: flex;
-    gap: 20px; 
+    gap: 15px; 
 }
 
 .btn-link {
-    padding: 14px 28px; 
-    border-radius: 50px;
+    flex: 1;
+    padding: 14px; 
+    border-radius: 12px; /* Cantos arredondados do print */
     text-align: center;
     font-weight: bold;
-    font-size: 1.05rem; 
+    font-size: 1rem; 
     transition: all 0.3s;
-    border: 2px solid transparent;
     text-decoration: none; 
 }
 
 .btn-repo {
     background-color: transparent;
-    border-color: var(--cor-secundaria);
-    color: var(--cor-secundaria);
+    border: 1px solid #444; /* Borda cinza para o botão de código */
+    color: #ccc;
 }
 
 .btn-repo:hover {
-    border-color: var(--cor-destaque);
-    color: var(--cor-destaque);
-    box-shadow: 0 0 5px var(--cor-destaque);
+    border-color: #fff;
+    color: #fff;
 }
 
 .btn-demo {
     background-color: var(--cor-destaque);
-    color: var(--cor-texto-principal);
+    color: white;
+    box-shadow: 0 4px 15px rgba(153, 51, 204, 0.4);
 }
 
 .btn-demo:hover {
-    background-color: #7b29a7;
-    box-shadow: 0 0 15px var(--cor-destaque); 
+    filter: brightness(1.2);
+    transform: scale(1.02);
 }
 
-/* --- CTA GITHUB PRINCIPAL --- */
+/* --- CTA GITHUB PRINCIPAL (Design Refinado) --- */
 .github-cta {
     margin-top: 60px;
-    padding: 40px; 
-    background-color: var(--cor-card-fundo);
-    border-radius: 12px;
-    border: 3px solid var(--cor-destaque); 
+    padding: 50px 40px; 
+    background-color: #121212; /* Fundo cinza grafite para dar continuidade aos cards */
+    border-radius: 20px; /* Bordas arredondadas para combinar com os cards */
+    border: 1px solid rgba(153, 51, 204, 0.3); /* Borda fina e elegante */
     display: inline-block;
     max-width: 900px; 
     width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Sombra suave para dar profundidade */
 }
 
 .github-cta p {
-    color: var(--cor-texto-principal);
+    color: #ccc; /* Cinza claro para combinar com a descrição dos cards */
     font-size: 1.2rem; 
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    line-height: 1.6;
 }
 
 .btn-github {
-    display: inline-block;
-    padding: 15px 35px; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 40px; 
     background-color: var(--cor-destaque);
-    color: var(--cor-texto-principal);
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 1.15rem;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    color: white; /* Texto em branco para melhor leitura */
+    border-radius: 12px; /* Mudado de 50px para 12px para seguir o padrão dos botões de projeto */
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(153, 51, 204, 0.3);
 }
 
 .btn-github:hover {
     background-color: #7b29a7;
-    box-shadow: 0 0 15px var(--cor-destaque);
+    transform: scale(1.05); /* Leve crescimento ao passar o mouse */
+    box-shadow: 0 0 20px var(--cor-destaque);
 }
 
-/* ---------------------------------------------------------------------- */
-/* --- RESPONSIVIDADE --- */
-/* ---------------------------------------------------------------------- */
-
-/* Telas de Tablet / Mobile Grande (Abaixo de 900px) */
-@media (max-width: 900px) {
-    /* RESOLVE O SCROLL HORIZONTAL: Força 1 coluna e anula o minmax(400px) */
-    .projects-grid {
-        grid-template-columns: 1fr; 
-        gap: 40px;
-    }
-    
-    .projects-section-content {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-}
-
-/* Celulares Menores (Abaixo de 600px) */
+/* Ajuste rápido para Mobile no CTA */
 @media (max-width: 600px) {
-    .project-card {
-        padding: 30px 20px;
-    }
-
-    .project-links {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .btn-link {
-        width: 100%; 
-    }
-
-    .project-title {
-        font-size: 1.6rem;
-    }
-    
     .github-cta {
-        padding: 30px;
+        padding: 40px 20px;
+        width: 90%;
     }
-    
     .btn-github {
-        font-size: 1.05rem;
-        padding: 12px 25px;
+        width: 100%;
+        font-size: 1rem;
     }
+}
+
+/* --- RESPONSIVIDADE (Mantendo sua lógica original) --- */
+@media (max-width: 900px) {
+    .projects-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .project-card { padding: 30px 20px; }
+    .project-links { flex-direction: column; }
+    .btn-link { width: 100%; }
 }

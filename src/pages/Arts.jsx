@@ -21,7 +21,7 @@ const ArtProjects = [
         cliente: "AloneMorning",
         descricao: "Emotes e visual temático pensados para o estilo do canal. Desafiador, mas divertido — exigiu atenção a cada detalhe (que me custou uma sobrancelha 😅).",
         imagem: AloneMorningEmotes,
-        linkLive: "https://www.twitch.tv/alonemorning", 
+        linkLive: "https://www.instagram.com/p/DVMLjeqjKjY/", 
         categoria: "Live Emojis / Twitch",
     },
     {
@@ -84,7 +84,7 @@ const Arts = () => {
                         rel="noopener noreferrer" 
                         className="btn-live"
                     >
-                        🔗 Post Instragram / Live
+                        🔗 Post Instragram
                     </a>
                 </div>
             </div>

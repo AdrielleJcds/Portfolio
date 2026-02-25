@@ -78,23 +78,25 @@
     margin-bottom: 25px;
 }
 
-/* --- Botão Link --- */
-.btn-art-link {
-    display: inline-block;
-    padding: 15px 30px; 
-    background-color: var(--cor-destaque);
-    color: var(--cor-texto-principal);
-    font-weight: bold;
-    font-size: 1.15rem; 
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s, box-shadow 0.3s;
+/* --- ESTILO DO CARD (Refinado) --- */
+.art-card {
+    background: linear-gradient(145deg, #1a1a1a, #0d0d0d); /* Profundidade sutil */
+    border: 1px solid rgba(153, 51, 204, 0.2); 
+    border-radius: 20px; /* Bordas mais arredondadas e modernas */
+    overflow: hidden; 
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animação suave */
 }
 
-.btn-art-link:hover {
-    background-color: #7b29a7;
-    box-shadow: 0 0 15px var(--cor-destaque);
+.art-card:hover {
+    transform: translateY(-12px); 
+    border-color: var(--cor-destaque);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 
+                0 0 20px rgba(153, 51, 204, 0.2); 
 }
+
 
 
 /* ---------------------------------------------------------------------- */

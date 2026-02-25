@@ -31,7 +31,6 @@ const Home = () => {
           <h2 className="profissao">Estudante de Engenharia de Software | Front-end & Design</h2>
           
           <p className="resumo">
-            Amo tecnologia e voltei à área com foco claro.
             Sou futura estudante de Engenharia de Software (Anhanguera - 2026), com interesse em desenvolvimento.
             Venho do design e aplico isso na criação de interfaces simples, bem estruturadas e funcionais.
           </p>

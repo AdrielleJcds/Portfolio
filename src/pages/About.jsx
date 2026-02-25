@@ -39,31 +39,27 @@ const About = () => {
                 
                 <h2 className="titulo-secao">Sobre Mim</h2>
                 <h3 className="subtitulo-jinnie">Jinnie</h3>
+<div className="texto-revisado">
+    <p>
+        Oi! Eu sou a <strong>Adrielle</strong>, mas dependendo de quem me pergunta, sou a <strong>Dri</strong> ou, para os amigos e clientes do mundo geek, a <strong>Jinnie</strong>.
+    </p>
+    
+    <p>
+        Minha história com a tecnologia começou cedo, aos 15 anos, quando mergulhei de cabeça no universo dos super-heróis. Cresci fascinada pela genialidade do <strong>Homem de Ferro</strong> e seu sonho — que hoje é o meu — de construir o meu próprio "Jarvis" ou uma "Sexta-feira". Quero usar a tecnologia para automatizar tarefas, otimizar o tempo e, acima de tudo, criar soluções que ajudem pessoas.
+    </p>
 
-                <div className="texto-revisado">
-                    <p>
-                        Sou <strong>Adrielle</strong>, conhecida como <strong>Jinnie</strong>. Atuo como desenvolvedora estudante de <strong>desenvolvimento</strong> e <strong>ilustradora digital</strong>.
-                    </p>
-                    
-                    <p>
-                        Minha ligação com a arte começou na infância, influenciada pelos desenhos que assistia. Ilustrações em estilo <strong>chibi/kawaii</strong> fazem parte do meu trabalho por unirem simplicidade, expressão e criatividade — características que valorizo até hoje.
-                    </p>
-                    
-                    <p>
-                        O interesse por tecnologia surgiu cedo. Sempre fui curiosa em explorar dispositivos além do uso comum, o que despertou meu interesse pela lógica por trás da tecnologia e pelo funcionamento dos sistemas. Essa curiosidade evoluiu para a admiração pelo processo de criação de jogos.
-                    </p>
+    <p>
+        Como todo bom herói, entendo que a responsabilidade é parte do processo. E, assim como o <strong>Miles Morales</strong>, meu Homem-Aranha favorito, não vivo só de lógica: a arte é o meu refúgio. Nas horas vagas, me transformo em <strong>artista digital</strong>, criando ilustrações fofinhas que exercitam minha criatividade e equilibram meu dia a dia.
+    </p>
 
-                    <p>
-                        Iniciei um curso de design, onde tive meu primeiro contato com <strong>UX Design</strong>. Essa experiência abriu caminho para a tecnologia e me levou a conquistar uma bolsa em Front-end, reforçando minha vontade de, no futuro, criar meus próprios sistemas.
-                    </p>
-                    <p>
-                        Atualmente sigo focada em desenvolvimento Front-end e iniciarei a graduação em <strong>Engenharia de Software em 2026</strong>. Sou curiosa, criativa e busco evoluir tecnicamente, aplicar boas práticas e entregar soluções bem feitas, sem excesso de enfeite.
-                    </p>
-                    <p>
-                        <strong>JINNIE</strong> representa uma <strong>J</strong>ornada guiada pela <strong>i</strong>novação, com foco em <strong>n</strong>ecessidades reais, base sólida, <strong>i</strong>maginação aplicada e <strong>e</strong>xecução consciente.
-                    </p>
-                </div>
+    <p>
+        Para mim, ser desenvolvedora é isso: unir o pensamento analítico de uma futura <strong>Engenheira de Software (2030)</strong> com a liberdade criativa de quem gosta de desenhar. Busco aplicar boas práticas e entregar soluções bem feitas, unindo <strong>UX Design</strong> e desenvolvimento Front-end.
+    </p>
 
+    <p>
+        <strong>JINNIE</strong> representa uma <strong>J</strong>ornada guiada pela <strong>i</strong>novação, com foco em <strong>n</strong>ecessidades reais, base sólida, <strong>i</strong>maginação aplicada e <strong>e</strong>xecução consciente.
+    </p>
+</div>
                 <p className="chamada-final">
                     Disponível para projetos de Front-end e ilustração.
                 </p>
@@ -83,7 +79,7 @@ const About = () => {
                 <div className="contato-info">
                     
                     <p className="contato-item">
-                        <FaBriefcase className="icone" /> <strong>Emprego:</strong> Atendente Unimed (desde Jul/2024)
+                        <FaBriefcase className="icone" /> <strong>Emprego: </strong> Atendente de Farmácia - Unimed 
                     </p>
                     
                     <p className="contato-item destaque-status">
@@ -93,7 +89,7 @@ const About = () => {
                         <FaCode className="icone" /> <strong>Área:</strong> Front-end (HTML, CSS, JS, React)
                     </p>
                     <p className="contato-item">
-                        <FaGraduationCap className="icone" /><strong>Status:</strong> Estudante (Eng. Software 2026)
+                        <FaGraduationCap className="icone" /><strong>Status:</strong> Estudante Engenharia Software
                     </p>
                     
                     <hr className="separador" />
@@ -112,14 +108,7 @@ const About = () => {
                     </p>
                 </div>
                 
-                <a 
-                    href={`mailto:${socialLinks.email}`} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="btn-card-contato"
-                >
-                    Fale Comigo Agora
-                </a>
+    
                 
             </div>
         </section>

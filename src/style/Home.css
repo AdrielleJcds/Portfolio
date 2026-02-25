@@ -1,73 +1,80 @@
 .home-container {
-    min-height: 90vh; 
+    min-height: 100vh; /* Ajustado para cobrir a tela cheia */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 70px 5%; 
+    padding: 80px 5%; 
     background-color: var(--cor-fundo);
-    overflow: hidden; 
+    overflow-x: hidden; /* Evita rolagem horizontal indesejada */
 }
 
 .home-content {
+    width: 100%;
     max-width: 1400px; 
     display: flex;
     flex-direction: row-reverse; 
     align-items: center;
-    gap: 70px; 
+    justify-content: space-between; /* Melhora distribuição no PC */
+    gap: clamp(30px, 5vw, 70px); /* Gap flexível */
 }
 
 /* --- IMAGEM DE PERFIL --- */
 .perfil-wrapper {
     flex-shrink: 0; 
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .perfil-img {
-    width: 400px; 
-    height: 400px; 
+    width: clamp(250px, 30vw, 400px); /* Ajusta tamanho da imagem conforme a tela */
+    height: auto; /* Mantém proporção */
+    aspect-ratio: 1 / 1; /* Garante que seja um quadrado para o border-radius */
     border-radius: 30%; 
     object-fit: cover;
     border: 2px solid var(--cor-destaque); 
     box-shadow: 0 0 25px rgba(153, 51, 204, 0.95); 
-    transition: transform 0.4s;
+    transition: transform 0.4s ease;
 }
 
 .perfil-img:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
 /* --- TEXTO PRINCIPAL --- */
 .home-text {
+    flex: 1; /* Permite que o texto ocupe o espaço restante */
     max-width: 800px; 
     text-align: left;
 }
 
 .saudacao {
-    font-size: 1.5rem; 
+    font-size: clamp(1rem, 1.5vw, 1.5rem); 
     color: var(--cor-secundaria);
     margin-bottom: 5px;
 }
 
 .nome-principal {
-    font-size: 4.2rem; 
+    /* Fonte fluida: min 2.5rem, ideal 5vw, max 4.2rem */
+    font-size: clamp(2.5rem, 5vw, 4.2rem); 
     font-weight: 900;
     color: var(--cor-texto-principal);
-    line-height: 1;
+    line-height: 1.1;
     margin-bottom: 15px;
 }
 
 .profissao {
-    font-size: 2.4rem; 
+    font-size: clamp(1.2rem, 2.5vw, 2.4rem); 
     font-weight: 500;
     color: var(--cor-destaque);
     margin-bottom: 25px; 
 }
 
 .resumo {
-    font-size: 1.4rem; 
+    font-size: clamp(1rem, 1.2vw, 1.4rem); 
     line-height: 1.7; 
     color: var(--cor-texto-principal);
-    margin-bottom: 30px; 
+    margin-bottom: 35px; 
 }
 
 /* --- BOTÕES DE AÇÃO --- */
@@ -81,9 +88,10 @@
     padding: 15px 30px; 
     border-radius: 40px;
     font-weight: bold;
-    font-size: 1.2rem; 
+    font-size: 1.1rem; 
     text-decoration: none; 
     transition: all 0.3s ease;
+    white-space: nowrap; /* Evita que o texto do botão quebre */
 }
 
 .btn-dev {
@@ -94,7 +102,7 @@
 
 .btn-dev:hover {
     background-color: #7b29a7;
-    box-shadow: 0 0 12px var(--cor-destaque);
+    box-shadow: 0 0 15px var(--cor-destaque);
 }
 
 .btn-art {
@@ -108,128 +116,103 @@
     color: var(--cor-fundo);
 }
 
-
-/* --- LINKS DE REDES SOCIAIS --- */
+/* --- REDES SOCIAIS --- */
 .social-links {
-    margin-top: 30px; 
+    margin-top: 35px; 
     display: flex;
-    gap: 20px; 
+    gap: 25px; 
 }
 
 .social-icon {
     font-size: 2.2rem; 
     color: var(--cor-secundaria); 
-    transition: color 0.3s;
+    transition: transform 0.3s, color 0.3s;
     cursor: pointer;
 }
 
-.social-links a:nth-child(1) .social-icon:hover {
-    color: #0A66C2; /* LinkedIn */
-}
-.social-links a:nth-child(2) .social-icon:hover {
-    color: #ffffff; /* GitHub */
-}
-.social-links a:nth-child(3) .social-icon:hover {
-    color: #E1306C; /* Instagram */
+.social-icon:hover {
+    transform: translateY(-5px);
 }
 
+.social-links a:nth-child(1) .social-icon:hover { color: #0A66C2; }
+.social-links a:nth-child(2) .social-icon:hover { color: #ffffff; }
+.social-links a:nth-child(3) .social-icon:hover { color: #E1306C; }
 
 /* ---------------------------------------------------------------------- */
-/* --- RESPONSIVIDADE --- */
+/* --- MEDIA QUERIES --- */
 /* ---------------------------------------------------------------------- */
 
-/* Tablet/Notebooks menores (Abaixo de 1250px) */
-@media (max-width: 1250px) { 
-    .home-content {
-        gap: 40px; 
-    }
-    .perfil-img {
-        width: 350px; 
-        height: 350px; 
-    }
-    .nome-principal {
-        font-size: 3.5rem;
-    }
-    .profissao {
-        font-size: 2rem;
-    }
-}
-
-/* Transição para layout de tablet/celular (Abaixo de 1024px) */
+/* Telas de Tablets e Celulares */
 @media (max-width: 1024px) {
     .home-container {
-        padding: 50px 5%; 
-        min-height: auto; 
+        padding: 100px 5% 50px 5%;
+        height: auto;
     }
+
     .home-content {
-        flex-direction: column; /* Pilha vertical */
+        flex-direction: column-reverse; /* Imagem em cima, texto embaixo */
         text-align: center;
-        gap: 30px; 
+        justify-content: center;
     }
+
     .home-text {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    .perfil-img {
-        width: 250px; 
-        height: 250px; 
-    }
+
     .cta-links {
-        gap: 15px; 
-        justify-content: center; /* Centraliza botões */
+        justify-content: center;
     }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+/* Ajustes finos para celulares pequenos */
+@media (max-width: 550px) {
+    .home-container {
+        padding: 80px 20px 40px 20px; /* Padding ajustado para dar mais espaço nas laterais */
+    }
+
+    .perfil-img {
+        width: 160px; /* Reduzi um pouco para o texto subir mais na tela */
+        height: 160px;
+        box-shadow: 0 0 15px rgba(153, 51, 204, 0.8); /* Brilho mais suave no mobile */
+    }
+
     .nome-principal {
-        font-size: 3rem; 
+        font-size: 2.2rem; /* Tamanho ideal para não quebrar palavras longas */
+        margin-bottom: 10px;
     }
+
     .profissao {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
     }
+
+    .resumo {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+
+    .cta-links {
+        width: 100%;
+        flex-direction: column; /* Força os botões a ficarem um sobre o outro */
+        gap: 12px;
+    }
+
     .btn-cta {
-        padding: 10px 20px;
+        width: 100%; /* Largura total conforme desejado */
+        text-align: center;
+        padding: 14px; /* Aumentado levemente para melhor área de toque (UX) */
         font-size: 1rem;
     }
-    .social-links {
-        margin-top: 30px; 
-        gap: 20px; 
-        justify-content: center; /* Centraliza ícones */
-    }
-    .social-icon {
-        font-size: 2.5rem; 
-    }
-}
-/* Transição para layout de tablet/celular (Abaixo de 1024px) */
-@media (max-width: 1024px) {
-    .home-container {
-        padding: 100px 5%; 
-        min-height: auto; 
-    }
-    .home-content {
-        flex-direction: column-reverse; /* <--- ESSA É A CORREÇÃO FINAL */
-        text-align: center;
-        gap: 30px; 
-    }
-    .home-text {
-        text-align: center;
-    }
-    /* ... (O restante dos estilos, como .perfil-img, permanecem abaixo) ... */
-}
 
-/* Celulares pequenos (Abaixo de 550px) */
-@media (max-width: 550px) {
-    .nome-principal {
-        font-size: 2.2rem; 
-    }
-    .profissao {
-        font-size: 1.1rem;
-    }
-    .perfil-img {
-        width: 140px; 
-        height: 140px; 
-    }
-    .btn-cta {
-        padding: 8px 15px;
-        font-size: 0.75rem;
-    }
-    .social-icon {
-        font-size: 1.6rem; 
+    .social-links {
+        gap: 25px;
+        margin-top: 25px;
     }
 }
